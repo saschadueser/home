@@ -1,68 +1,36 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-VariableFont_wght.ttf);
+}
+  
+@font-face {
+  font-family: 'Lora';
+  src: url(fonts/Lora-VariableFont_wght.ttf);
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --blueLight: #1A6F88;
+  --bluedark: #113D4A;
+  --accentColor: rgb(253, 203, 145);
+  --blueGradient: linear-gradient(var(--blueLight),var(--bluedark));
+  --regularTransition: 300ms ease-in;
+  --boxShadow: 5px 5px 20px rgba(0,0,0,0.5);
+  --boxShadowAccent: 5px 5px 20px var(--accentColor);
+  --backgroundColor: #e1e4eb;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Special Glass Effect using background, backdrop-filter and border-right + border-bottom */
+  --glassBackgroundBlue: linear-gradient(135deg, rgba(26, 111, 136, 0.9), rgba(17, 61, 74, 0.75));
+  --glassBackgroundWhite: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(205, 205, 205, 0.75));
+  --glassBackgroundBlur: blur(20px);
+  --glassBackgroundBorderBottomAndRight: 1px solid rgba(255,255,255,0.5);
+  /* *** */
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
+  
 a:hover {
   color: #535bf2;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  font-family: 'Lora';
+  margin: 0 auto;
 }
