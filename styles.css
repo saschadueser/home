@@ -1,0 +1,9 @@
+/* Entry point for every CSS */
+
+@import url(ressources/css/general.css);
+@import url(ressources/css/header.css);
+@import url(ressources/css/service.css);
+@import url(ressources/css/projekte.css);
+@import url(ressources/css/about.css);
+@import url(ressources/css/kontakt.css);
+@import url(ressources/css/footer.css);
