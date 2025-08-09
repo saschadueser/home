@@ -1,0 +1,21 @@
+#about {
+    background: var(--blueGradient);
+    color: #fff;
+}
+
+#about .content {
+    gap: 100px;
+}
+
+.about-image {
+    border-radius: 100px;
+    grid-column: 6/8;
+}
+
+.about-text {
+    grid-column: 3/6;
+}
+
+#about h2 {
+    color: var(--accentColor);
+}

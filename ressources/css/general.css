@@ -1,36 +1,185 @@
+
 @font-face {
-  font-family: 'Montserrat';
-  src: url(fonts/Montserrat-VariableFont_wght.ttf);
+    font-family: 'Montserrat';
+    src: url(/ressources/fonts/Montserrat-VariableFont_wght.ttf);
+  }
+  
+  @font-face {
+    font-family: 'Lora';
+    src: url(/ressources/fonts/Lora-VariableFont_wght.ttf);
+  }
+  
+  :root {
+    --blueLight: #1A6F88;
+    --bluedark: #113D4A;
+    --accentColor: rgb(253, 203, 145);
+    --blueGradient: linear-gradient(var(--blueLight),var(--bluedark));
+    --regularTransition: 300ms ease-in;
+    --boxShadow: 5px 5px 20px rgba(0,0,0,0.5);
+    --boxShadowAccent: 5px 5px 20px var(--accentColor);
+    --backgroundColor: #e1e4eb;
+  
+    /* Special Glass Effect using background, backdrop-filter and border-right + border-bottom */
+    --glassBackgroundBlue: linear-gradient(135deg, rgba(26, 111, 136, 0.9), rgba(17, 61, 74, 0.75));
+    --glassBackgroundWhite: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(205, 205, 205, 0.75));
+    --glassBackgroundBlur: blur(20px);
+    --glassBackgroundBorderBottomAndRight: 1px solid rgba(255,255,255,0.5);
+    /* *** */
+  
+  }
+  
+  /* General Tags */
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  ul {
+    padding: 1.5rem;
+    list-style-type: disc;
+  }
+
+  ul li {
+    margin: 0.5rem 0;
 }
   
-@font-face {
-  font-family: 'Lora';
-  src: url(fonts/Lora-VariableFont_wght.ttf);
-}
-
-:root {
-  --blueLight: #1A6F88;
-  --bluedark: #113D4A;
-  --accentColor: rgb(253, 203, 145);
-  --blueGradient: linear-gradient(var(--blueLight),var(--bluedark));
-  --regularTransition: 300ms ease-in;
-  --boxShadow: 5px 5px 20px rgba(0,0,0,0.5);
-  --boxShadowAccent: 5px 5px 20px var(--accentColor);
-  --backgroundColor: #e1e4eb;
-
-  /* Special Glass Effect using background, backdrop-filter and border-right + border-bottom */
-  --glassBackgroundBlue: linear-gradient(135deg, rgba(26, 111, 136, 0.9), rgba(17, 61, 74, 0.75));
-  --glassBackgroundWhite: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(205, 205, 205, 0.75));
-  --glassBackgroundBlur: blur(20px);
-  --glassBackgroundBorderBottomAndRight: 1px solid rgba(255,255,255,0.5);
-  /* *** */
-}
+  html {
+    font-size: 14px;
+    scroll-behavior: smooth;
+  }
   
-a:hover {
-  color: #535bf2;
-}
+  body {
+    font-family: 'Lora';
+    font-weight: 400;
+    line-height: 1.25;
+    background: var(--backgroundColor);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    margin: 1rem 0;
+    color: var(--blueLight);
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    font-weight: 800;
+  }
+  
+  h3 {
+    font-size: 2rem;
+  }
+  
+  h4 {
+    font-size: 1.75rem;
+  }
+  
+  h5 {
+    font-size: 1.5rem;
+  }
+  
+  h6 {
+    font-size: 1.25rem;
+  }
 
-body {
-  font-family: 'Lora';
-  margin: 0 auto;
+  p {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: var(--bluedark);
+    transition: var(--regularTransition);
+  }
+
+  a:hover {
+    color: var(--accentColor);
+  }
+  
+  section {
+    padding: 3rem 0 5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .content {
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .button {
+    margin: 1rem 0;
+    text-decoration: none;
+    background: var(--glassBackgroundBlue);
+    background-size: 200% 200%;
+    background-position: top left;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    color: #fff;
+    box-shadow: var(--boxShadow);
+    transition: var(--regularTransition);
+    backdrop-filter: var(--glassBackgroundBlur);
+    border-bottom: var(--glassBackgroundBorderBottomAndRight);
+    border-right: var(--glassBackgroundBorderBottomAndRight);
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-position: bottom right;
+    transform: scale(1.05);
+  }
+
+  [class^="fa"] {
+    transition: var(--regularTransition);
+    color: transparent;
+    background: var(--blueGradient);
+    background-clip: text;
+    background-size: 100% 200%;
+    background-position: top;
+  }
+
+  a:hover [class^="fa"] {
+    background-clip: text;
+    color: transparent;
+    background-position: bottom;
+    transform: scale(1.05);
+  }
+
+  section#datenschutz .content {
+    margin-top: 3rem;
+    grid-column: 3/9;
+  }
+
+  .datenschutz-text {
+    grid-column: 3/9;
+    grid-row: 2;
+  }
+
+  .tool {
+    display: none;
+  }
+  
+  @media screen and (min-width: 1028px) {
+    html {
+      font-size: 16px;
+    }
+
+    .content {
+      display: grid;
+      grid-template: auto / repeat(10, 1fr);
+    }
+
+    .section-headline {
+      grid-row: auto;
+      grid-column: 3/9;
+    }  
+    
 }

@@ -1,0 +1,95 @@
+@media screen and (min-width: 1028px) {
+    .tool {
+        background: var(--blueGradient);
+        position: fixed;
+        left: 50px;
+        bottom: 50px;
+        padding: 20px;
+        cursor: pointer;
+        box-shadow: var(--boxShadow);
+        font-size: 14px;
+        border-radius: 25px;
+        color: #fff;
+        display: block;
+    }
+
+    .fa-accessible-icon {
+        margin-top: 10px;
+    }
+  
+    .tool .fa-brands, .tool .fa {
+        color: var(--accentColor);
+        font-size: 18px;
+    }
+
+    .tool .font-size-adjustment {
+        display: flex;
+        gap: 1px;
+    }
+
+    .tool .fa-plus, .tool .fa-minus {
+        background: var(--accentColor);
+        color: var(--blueLight);
+    }
+
+    .tool .fa-plus.inactive, .tool .fa-minus.inactive {
+        background: grey;
+        color: #fff;
+    }
+
+    .tool-objects {
+        max-height: 0;
+        max-width: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transition: var(--regularTransition);
+        display: flex;
+        flex-flow: column;
+        gap: 10px;
+    } 
+
+    .tool-objects.show {
+        max-height: 100px;
+        max-width: 100px;
+        overflow: initial;
+        pointer-events: initial;
+        margin-bottom: 20px;
+    }
+
+    .tool-objects > div{
+        display: flex;
+    }
+
+    .switch-container {
+        width: 50px;
+        height: 20px;
+        border-radius: 50px;
+        background: var(--glassBackgroundBlue);
+        position: relative;
+        border-bottom: var(--glassBackgroundBorderBottomAndRight);
+        border-right: var(--glassBackgroundBorderBottomAndRight);
+        box-shadow: var(--boxShadow);
+    }
+
+    .switch {
+        width: 20px;
+        height: 20px;
+        background: var(--accentColor);
+        border-radius: 100px;
+        transition: 300ms ease-in;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        transform: translateX(10%);
+        box-shadow: var(--boxShadow);
+
+    }
+
+    .switch.active {
+        transform: translateX(140%);
+    }
+}
+

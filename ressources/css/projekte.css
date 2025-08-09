@@ -1,0 +1,89 @@
+.projekt-vorschau {
+  min-height: 250px;
+  background: url(/ressources/images/music-1106439_1920.jpg);
+  transition: 700ms ease-in;
+  transform: translateX(-100%);
+  opacity: 0;
+  }
+
+  #projekte .content {
+    padding: 0;
+  }
+  
+  .projekt-logos {
+    grid-row: 2;
+    grid-column: 6/9;
+    display: flex;
+    justify-content: flex-start;
+    justify-content: center;
+    margin-top: 1rem;
+  } 
+  
+  #projekte .content {
+    gap: 25px;
+  }
+  
+  .projekt-beschreibung {
+    grid-row: 3;
+    grid-column: 6/9;
+    overflow: hidden;
+  }
+  
+  .projekt-beschreibung-wrapper {
+    display: flex;
+    transition: var(--regularTransition);
+    opacity: 0;
+  }
+  
+  .projekt-beschreibung-wrapper > div {
+    flex: 1 0 100%;
+    padding: 2rem;
+  }
+  
+  .projekt-logo {
+    border-radius: 100%;
+    width: 4rem;
+    height: 4rem;
+    padding: 0.1rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    box-shadow: var(--boxShadow);
+    border-right: var(--glassBackgroundBorderBottomAndRight);
+    border-bottom: var(--glassBackgroundBorderBottomAndRight);
+    backdrop-filter: var(--glassBackgroundBlur);
+    opacity: 0;
+    transition: var(--regularTransition);
+  }
+
+  .active {
+    box-shadow: var(--boxShadowAccent);
+    border: 1px solid black;
+  }
+  
+  .projekt-logo.tus {
+    background: url(/ressources/images/logo-tus.png) no-repeat, var(--blueGradient);
+    background-size: contain;
+    background-position: center;
+  }
+  
+  .projekt-logo.nightlife {
+    background: url(/ressources/images/logo-nightlifeevents.png) no-repeat, var(--blueGradient);
+    background-size: contain;
+    background-position: center;
+  }
+  
+  .projekt-logo.ttc {
+    background: url(/ressources/images/logo-ttc.png) no-repeat, var(--blueGradient);
+    background-size: contain;
+    background-position: center;
+  }
+  
+  @media screen and (min-width:1028px) {
+    .projekt-vorschau {
+      grid-row: span 3;
+      grid-column: 1 / 6;
+      border-radius: 0px 50px 50px 0 ;
+      box-shadow: var(--boxShadow);
+      height: 90%;
+    }  
+  }

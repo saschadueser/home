@@ -1,0 +1,57 @@
+#service {
+    background: var(--blueGradient);
+    background-attachment: fixed;
+}
+
+#service h2 {
+    color: var(--accentColor);
+}
+
+#service .fa {
+    font-size: 3rem;
+}
+
+#service .fa-circle-minus {
+    color: var(--accentColor);
+}
+
+.service-wrapper {
+    grid-column: 3/9;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.service-item {
+    flex: 1 1 300px;
+    background: var(--glassBackgroundWhite);
+    backdrop-filter: var(--glassBackgroundBlur);
+    box-shadow: var(--boxShadow);
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    border-bottom: var(--glassBackgroundBorderBottomAndRight);
+    border-right: var(--glassBackgroundBorderBottomAndRight);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    max-height: 235px;
+    transition: var(--regularTransition);
+    margin: 0.5rem 1rem;
+}
+
+.service-item.show {
+    max-height: 500px;
+}
+
+.service-item .fa-circle-plus {
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    cursor: pointer;
+    transition: var(--regularTransition);
+}
+
+.service-item .fa-circle-plus:hover {
+    scale: 1.1;
+}
