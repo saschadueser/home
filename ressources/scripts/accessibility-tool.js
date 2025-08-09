@@ -10,11 +10,13 @@
  
 const fontElements = ["p", "a"];
  
-const toolObjectTrigger = document.querySelector(".fa-accessible-icon");
+const toolObjectTrigger = document.querySelector(".access-trigger");
 const toolObjects = document.querySelector(".tool-objects");
  
 toolObjectTrigger.addEventListener("click", (e) => {
-    toolObjects.classList.toggle("show")
+    toolObjects.classList.toggle("show");
+    e.target.classList.toggle("fa-universal-access");
+    e.target.classList.toggle("fa-xmark")
 })
  
 // making font size bigger
@@ -44,6 +46,14 @@ smallerFontButton.addEventListener("click", fontSizeResizer);
 // Grayscale function
 const grayScaleButton = document.querySelector(".tool .fa-circle-half-stroke");
 let actualGrayScale = false;
+
+// Switch function for bw switch
+const switchContainer = document.querySelector(".blackwhite-switch .switch-container");
+const switcher = document.querySelector(".switch");
+ 
+switchContainer.addEventListener("click", e => {
+    switcher.classList.toggle("active")
+})
  
 function grayscaleWholePage() {
     if(actualGrayScale) {
@@ -55,12 +65,4 @@ function grayscaleWholePage() {
     }
 }
  
-grayScaleButton.addEventListener("click", grayscaleWholePage);
- 
-// Testing Switch function
-const switchContainer = document.querySelector(".switch-container");
-const switcher = document.querySelector(".switch");
- 
-switchContainer.addEventListener("click", e => {
-    switcher.classList.toggle("active")
-})
+switchContainer.addEventListener("click", grayscaleWholePage);
