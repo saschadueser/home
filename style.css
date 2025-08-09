@@ -40,6 +40,11 @@
   grid-column: 3/9;
 }
 
+#intro .button {
+  text-align: center;
+  grid-column: 5/7;
+}
+
 .online-symbol {
   display: inline;
   width: 25px;

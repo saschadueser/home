@@ -1,10 +1,26 @@
 .projekt-vorschau {
   min-height: 250px;
   background: url(/ressources/images/music-1106439_1920.jpg);
+  background-size: cover;
   transition: 700ms ease-in;
   transform: translateX(-100%);
   opacity: 0;
   }
+
+.projekt-vorschau.tus {
+  background: url(/ressources/images/projekt-vorschau-tuseversten.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.projekt-vorschau.nightlife {
+  background: url(/ressources/images/projekt-vorschau-nightlifeevents.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.projekt-vorschau.ttc {
+  background: url(/ressources/images/projekt-vorschau-ttc.jpg) center no-repeat;
+  background-size: cover;
+}
 
   #projekte .content {
     padding: 0;
@@ -86,4 +102,4 @@
       box-shadow: var(--boxShadow);
       height: 90%;
     }  
-  }
+  } 

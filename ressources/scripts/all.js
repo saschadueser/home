@@ -76,20 +76,6 @@ const serviceObserver = new IntersectionObserver( (entries) => {
 serviceObserver.observe(serviceSection)
  
  
-// Handling project logo clicks
-const projektLogos = document.querySelectorAll(".projekt-logo");
-const projektBeschreibung = document.querySelector(".projekt-beschreibung-wrapper");
- 
-eventsForNavigating.forEach( event => {
-    projektLogos.forEach( (el, index) => {
-        el.addEventListener(event, (e) => {
-            projektBeschreibung.style.transform = `translateX(-${index*100}%)`;
-            el.classList.add("show")
-        })
-    })
- 
-})
- 
 // Handling validity of form
 const formInputElements = document.querySelectorAll("form .datainput");
  
@@ -150,6 +136,23 @@ const projektObserver = new IntersectionObserver( (entries) => {
 }, observerOptions )
  
 projektObserver.observe(projekteSection)
+
+// Handling project logo clicks
+const projektLogos = document.querySelectorAll(".projekt-logo");
+const projektBeschreibung = document.querySelector(".projekt-beschreibung-wrapper");
+const projektVorschauKlassen = ["tus", "nightlife", "ttc"];
+ 
+eventsForNavigating.forEach( event => {
+    projektLogos.forEach( (el, index) => {
+        el.addEventListener(event, (e) => {
+            projektBeschreibung.style.transform = `translateX(-${index*100}%)`;
+            el.classList.add("show");
+            projektVorschau.classList.remove(...projektVorschauKlassen);
+            projektVorschau.classList.add(projektVorschauKlassen[index])
+        })
+    })
+ 
+})
  
 // About
  
