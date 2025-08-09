@@ -20,14 +20,12 @@ const serviceItem = document.querySelectorAll(".service-item");
  
 eventsForNavigating.forEach( event =>
     navTrigger.addEventListener(event, (e) => {
-        if(navTrigger.classList.contains("fa-bars")) {
-            navTrigger.classList.remove("fa-bars");
-            navTrigger.classList.add("fa-xmark");
-        } else {
-            navTrigger.classList.remove("fa-xmark");
-            navTrigger.classList.add("fa-bars");
+        if(e.type === "click") {
+            e.preventDefault;
+            navTrigger.classList.toggle("fa-bars");
+            navTrigger.classList.toggle("fa-xmark")
+            nav.classList.toggle("show");
         }
-        nav.classList.toggle("show");
     })
 )
  
@@ -187,6 +185,7 @@ const footerLinks = document.querySelectorAll("footer a");
  
 const tabIndexElements = [navTrigger, navItems, heroButton, introSection, serviceSection, serviceShowMoreButton, projekteSection, projektLogos, aboutSection, kontaktSection, formElements, footerLinks];
 let lastTabIndex = 1;
+const navItemsTabs = [];
  
 tabIndexElements.forEach( (el) => {
     if(el.length > 1) {

@@ -36,6 +36,11 @@
     box-sizing: border-box;
   }
 
+  button {
+    background: none;
+    border: none;
+  }
+
   ul {
     padding: 1.5rem;
     list-style-type: disc;
