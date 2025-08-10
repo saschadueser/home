@@ -27,13 +27,17 @@
     /* *** */
   
   }
-  
+
   /* General Tags */
   
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  *:focus {
+    outline: 5px solid red;
   }
 
   button {

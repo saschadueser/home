@@ -5,16 +5,19 @@
         left: 50px;
         bottom: 50px;
         padding: 20px;
-        cursor: pointer;
         box-shadow: var(--boxShadow);
         border-radius: 25px;
         color: #fff;
         display: block;
     }
+
+    .controller {
+        cursor: pointer;
+    }
   
     .tool .fa {
         color: var(--accentColor);
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .tool .font-size-adjustment {
@@ -53,6 +56,7 @@
 
     .tool-objects > div{
         display: flex;
+        align-items: center;
     }
 
     .switch-container {

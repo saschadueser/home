@@ -45,8 +45,10 @@ const serviceShowMoreButton = document.querySelectorAll("#service .fa-circle-plu
 eventsForNavigating.forEach( event => {
     serviceShowMoreButton.forEach( (el,index) => {
         el.addEventListener(event, (e) => {
-            serviceItem[index].classList.toggle("show");
-            e.target.classList.toggle("fa-circle-minus")
+            if(e.type === "click" || e.key == "Enter" ) {
+                serviceItem[index].classList.toggle("show");
+                e.target.classList.toggle("fa-circle-minus")
+            }
         })
     })
 })
@@ -143,10 +145,12 @@ const projektVorschauKlassen = ["tus", "nightlife", "ttc"];
 eventsForNavigating.forEach( event => {
     projektLogos.forEach( (el, index) => {
         el.addEventListener(event, (e) => {
-            projektBeschreibung.style.transform = `translateX(-${index*100}%)`;
-            el.classList.add("show");
-            projektVorschau.classList.remove(...projektVorschauKlassen);
-            projektVorschau.classList.add(projektVorschauKlassen[index])
+            if(e.type === "click" || e.key === "Enter") {
+                projektBeschreibung.style.transform = `translateX(-${index*100}%)`;
+                el.classList.add("show");
+                projektVorschau.classList.remove(...projektVorschauKlassen);
+                projektVorschau.classList.add(projektVorschauKlassen[index])
+            }
         })
     })
  
@@ -190,9 +194,9 @@ const navItemsTabs = [];
 tabIndexElements.forEach( (el) => {
     if(el.length > 1) {
         el.forEach( (listEl) => {
-            listEl.setAttribute("tabindex", lastTabIndex++)
+            listEl.setAttribute("tabindex", lastTabIndex++);
         } )
     } else {
-        el.setAttribute("tabindex", lastTabIndex++)
+        el.setAttribute("tabindex", lastTabIndex++);
     }              
 })
