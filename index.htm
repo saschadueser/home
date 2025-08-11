@@ -161,17 +161,17 @@
         <section id="kontakt">
             <div class="content">
                 <h2 class="section-headline">Kontakt</h2>
-                <form action="">
+                <form action="sendmail.php" method="POST">
                     <label for="form-name">Dein Vor- und Zuname:</label>
-                    <input class="datainput form-element" type="text" name="name" id="form-name" placeholder="Max Mustermann">
+                    <input class="datainput form-element" type="text" name="name" id="form-name" placeholder="Max Mustermann" required> 
                     <label for="form-mail">Deine e-Mail-Adresse:</label>
-                    <input class="datainput form-element" type="email" name="mail" id="form-mail" placeholder="max-mustermann@mustermail.de">
+                    <input class="datainput form-element" type="email" name="mail" id="form-mail" placeholder="max-mustermann@mustermail.de" required>
                     <label for="form-phone">Deine Mobil-/Telefonnummer:</label>
                     <input class="datainput form-element" type="tel" name="phone" id="form-phone" placeholder="0123 456789">
                     <label for="form-message">Deine Nachricht an mich:</label>
-                    <textarea class="datainput form-element" name="nachricht" id="form-message" placeholder="Hi, ich möchte dir folgendes mitteilen..." rows="10" minlength="15"></textarea>
+                    <textarea class="datainput form-element" name="nachricht" id="form-message" placeholder="Hi, ich möchte dir folgendes mitteilen..." rows="10" minlength="15" required></textarea>
                     <div>
-                        <input class="datainput form-element" type="checkbox" id="ds-confirm">
+                        <input class="datainput form-element" type="checkbox" id="ds-confirm" name="ds-confirm" required>
                         <label for="ds-confirm">Bist du mit der Verarbeitung deiner angegebenen Daten, gemäß der <a href="/datenschutz.htm#forms" target="_blank">Datenschutzerklärung</a>, einverstanden? Dann aktiviere bitte diese Schaltfläche.</label>
                     </div>
                     <input type="submit" class="button form-element" value="Nachricht senden">
