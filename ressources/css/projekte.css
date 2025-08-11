@@ -1,7 +1,5 @@
 .projekt-vorschau {
   min-height: 250px;
-  background: url(/ressources/images/music-1106439_1920.jpg);
-  background-size: cover;
   transition: 700ms ease-in;
   transform: translateX(-100%);
   opacity: 0;

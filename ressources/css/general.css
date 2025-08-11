@@ -36,8 +36,8 @@
     box-sizing: border-box;
   }
 
-  *:focus {
-    outline: 5px solid red;
+  label {
+    cursor: pointer;
   }
 
   button {
@@ -55,7 +55,7 @@
 }
   
   html {
-    font-size: 14px;
+    font-size: 18px;
     scroll-behavior: smooth;
   }
   
