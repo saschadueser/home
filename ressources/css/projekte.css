@@ -6,17 +6,17 @@
   }
 
 .projekt-vorschau.tus {
-  background: url(/ressources/images/projekt-vorschau-tuseversten.jpg) center no-repeat;
+  background: url("/ressources/images/projekt-vorschau-tuseversten.jpg") center no-repeat;
   background-size: cover;
 }
 
 .projekt-vorschau.nightlife {
-  background: url(/ressources/images/projekt-vorschau-nightlifeevents.jpg) center no-repeat;
+  background: url("/ressources/images/projekt-vorschau-nightlifeevents.jpg") center no-repeat;
   background-size: cover;
 }
 
 .projekt-vorschau.ttc {
-  background: url(/ressources/images/projekt-vorschau-ttc.jpg) center no-repeat;
+  background: url("/ressources/images/projekt-vorschau-ttc.jpg") center no-repeat;
   background-size: cover;
 }
 
@@ -75,19 +75,19 @@
   }
   
   .projekt-logo.tus {
-    background: url(/ressources/images/logo-tus.png) no-repeat, var(--blueGradient);
+    background: url("/ressources/images/logo-tus.png") no-repeat, var(--blueGradient);
     background-size: contain;
     background-position: center;
   }
   
   .projekt-logo.nightlife {
-    background: url(/ressources/images/logo-nightlifeevents.png) no-repeat, var(--blueGradient);
+    background: url("/ressources/images/logo-nightlifeevents.png") no-repeat, var(--blueGradient);
     background-size: contain;
     background-position: center;
   }
   
   .projekt-logo.ttc {
-    background: url(/ressources/images/logo-ttc.png) no-repeat, var(--blueGradient);
+    background: url("/ressources/images/logo-ttc.png") no-repeat, var(--blueGradient);
     background-size: contain;
     background-position: center;
   }
