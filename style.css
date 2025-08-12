@@ -19,7 +19,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url(ressources/images/music-1106439_1920.jpg) no-repeat;
+  background: url("ressources/images/music-1106439_1920.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   padding: 2rem;

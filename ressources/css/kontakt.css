@@ -39,13 +39,12 @@ input.invalid, textarea.invalid {
     grid-template-columns: subgrid;
     grid-template-rows: auto;
     grid-column: 6/12;
-    grid-row: auto;
     padding: 1rem;
     border-top-left-radius: 50px;
     box-shadow: var(--boxShadow);
     padding: 2rem;
     margin-left: 1rem;
-    max-height: 400px;
+    max-height: 500px;
     background: var(--accentColor);
     transition: 500ms;
 }
@@ -66,11 +65,13 @@ input.invalid, textarea.invalid {
     display: flex;
     flex-flow: row wrap;
     grid-column: 1/4;
+    grid-row: 2;
     gap: 1rem;
 
 }
 
 .contact-items a {
+    flex: 1;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -84,4 +85,4 @@ input.invalid, textarea.invalid {
         grid-template-columns: repeat(3,1fr);
         grid-column: 1/4;
     }
-        }
+}
