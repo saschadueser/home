@@ -1,12 +1,12 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url(/ressources/fonts/Montserrat-VariableFont_wght.ttf);
+    src: url('/ressources/fonts/Montserrat-VariableFont_wght.ttf');
   }
   
   @font-face {
     font-family: 'Lora';
-    src: url(/ressources/fonts/Lora-VariableFont_wght.ttf);
+    src: url('/ressources/fonts/Lora-VariableFont_wght.ttf');
   }
   
   :root {
@@ -60,14 +60,14 @@
   }
   
   body {
-    font-family: 'Lora';
+    font-family: 'Lora', system-ui;
     font-weight: 400;
     line-height: 1.25;
     background: var(--backgroundColor);
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', system-ui;
     font-weight: 700;
     margin: 1rem 0;
     color: var(--blueLight);
