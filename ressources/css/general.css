@@ -1,12 +1,12 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('/ressources/fonts/Montserrat-VariableFont_wght.ttf');
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf');
   }
   
   @font-face {
     font-family: 'Lora';
-    src: url('/ressources/fonts/Lora-VariableFont_wght.ttf');
+    src: url('../fonts/Lora-VariableFont_wght.ttf');
   }
   
   :root {
@@ -191,4 +191,5 @@
       grid-column: 3/9;
     }  
     
+
 }
