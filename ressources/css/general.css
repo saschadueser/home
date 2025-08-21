@@ -58,6 +58,10 @@
     font-size: 18px;
     scroll-behavior: smooth;
   }
+
+  address {
+    font-style: normal;
+  }
   
   body {
     font-family: 'Lora', system-ui;
