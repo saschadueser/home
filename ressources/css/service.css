@@ -17,12 +17,9 @@
 
 .service-wrapper {
     grid-column: 3/9;
-    display: flex;
-    flex-flow: row wrap;
 }
 
 .service-item {
-    flex: 1 1 300px;
     background: var(--glassBackgroundWhite);
     backdrop-filter: var(--glassBackgroundBlur);
     box-shadow: var(--boxShadow);
@@ -54,4 +51,15 @@
 
 .service-item .fa-circle-plus:hover {
     scale: 1.1;
+}
+
+@media screen and (min-width: 1028px) {
+    .service-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .service-item {
+        flex: 1 1 350px;
+    }
 }
